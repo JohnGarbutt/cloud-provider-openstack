@@ -8,8 +8,10 @@ spec:
   ports:
     - name: filemanager
       port: 80
+      nodePort: 30000
   selector:
     app: demo
+  type: NodePort
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -36,6 +38,7 @@ spec:
         volumeMounts:
           - name: cephfs-mount
             mountPath: /srv
+            subPath: johng
       volumes:
         - name: cephfs-mount
           persistentVolumeClaim:

@@ -1,7 +1,7 @@
 apiVersion: storage.k8s.io/v1beta1
 kind: StorageClass
 metadata:
-  name: manila-cephfs-share
+  name: manila-cephfs-share2
 provisioner: manila-provisioner
 parameters:
   type: default
